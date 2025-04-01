@@ -1,0 +1,26 @@
+[gd_resource type="AnimatedTexture" load_steps=8 format=3 uid="uid://bumok0ahfuoei"]
+
+[ext_resource type="Texture2D" uid="uid://b1d3nd2cmh7wk" path="res://fierypits/Environment ( With Animations )/Burning Lava/burninglava1.png" id="1_vsk4c"]
+[ext_resource type="Texture2D" uid="uid://m8keuta1v6mq" path="res://fierypits/Environment ( With Animations )/Burning Lava/burninglava2.png" id="2_hbqfl"]
+[ext_resource type="Texture2D" uid="uid://difculjpjiugg" path="res://fierypits/Environment ( With Animations )/Burning Lava/burninglava3.png" id="3_4m0uw"]
+[ext_resource type="Texture2D" uid="uid://s4vykfcw84ir" path="res://fierypits/Environment ( With Animations )/Burning Lava/burninglava4.png" id="4_jfa46"]
+[ext_resource type="Texture2D" uid="uid://cyvpsw3g66dkj" path="res://fierypits/Environment ( With Animations )/Burning Lava/burninglava5.png" id="5_mpbqn"]
+[ext_resource type="Texture2D" uid="uid://cfr5qyujh8vsd" path="res://fierypits/Environment ( With Animations )/Burning Lava/burninglava6.png" id="6_yn8d6"]
+[ext_resource type="Texture2D" uid="uid://ctaevltb0xhvi" path="res://fierypits/Environment ( With Animations )/Burning Lava/burninglava7.png" id="7_0tb8x"]
+
+[resource]
+frames = 7
+speed_scale = 7.0
+frame_0/texture = ExtResource("1_vsk4c")
+frame_1/texture = ExtResource("2_hbqfl")
+frame_1/duration = 1.0
+frame_2/texture = ExtResource("3_4m0uw")
+frame_2/duration = 1.0
+frame_3/texture = ExtResource("4_jfa46")
+frame_3/duration = 1.0
+frame_4/texture = ExtResource("5_mpbqn")
+frame_4/duration = 1.0
+frame_5/texture = ExtResource("6_yn8d6")
+frame_5/duration = 1.0
+frame_6/texture = ExtResource("7_0tb8x")
+frame_6/duration = 1.0
