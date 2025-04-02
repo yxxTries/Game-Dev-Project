@@ -198,3 +198,7 @@ shape = SubResource("RectangleShape2D_ctw5b")
 position = Vector2(2, 1)
 sprite_frames = SubResource("SpriteFrames_ruywk")
 animation = &"wake_up"
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(3, 3)
+limit_left = 0

@@ -11,7 +11,7 @@ process_mode = 3
 [node name="player" parent="." instance=ExtResource("3_l06ap")]
 position = Vector2(30, 1017)
 
-[node name="Camera2D" type="Camera2D" parent="player"]
+[node name="Camera2D2" type="Camera2D" parent="player"]
 position = Vector2(41, -108)
 zoom = Vector2(3, 3)
 limit_left = 0

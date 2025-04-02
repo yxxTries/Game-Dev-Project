@@ -35,6 +35,10 @@ window/size/viewport_height=1090
 
 enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
+[global_group]
+
+bullets=""
+
 [input]
 
 run_left={
