@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://esr5im8i4342"]
+
+[ext_resource type="Script" path="res://key.gd" id="1_6a12u"]
+[ext_resource type="Texture2D" uid="uid://3jodymnrsjcl" path="res://assets/Items/keys/KeyIcons.png" id="1_oh1p1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4wmi"]
+size = Vector2(40, 37)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vapf2"]
+texture = ExtResource("1_oh1p1")
+0:0/0 = 0
+1:0/0 = 0
+2:0/0 = 0
+3:0/0 = 0
+4:0/0 = 0
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+0:1/0 = 0
+2:1/0 = 0
+4:1/0 = 0
+6:1/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_u4pvr"]
+sources/0 = SubResource("TileSetAtlasSource_vapf2")
+
+[node name="key" type="Area2D"]
+script = ExtResource("1_6a12u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 15.5)
+shape = SubResource("RectangleShape2D_g4wmi")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+tile_map_data = PackedByteArray(0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 2, 0, 1, 0, 0, 0, 1, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0, 0)
+tile_set = SubResource("TileSet_u4pvr")
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]

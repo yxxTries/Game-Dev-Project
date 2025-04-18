@@ -1,4 +1,4 @@
-[gd_scene load_steps=55 format=3 uid="uid://b8vofvhgwbis2"]
+[gd_scene load_steps=56 format=3 uid="uid://b8vofvhgwbis2"]
 
 [ext_resource type="Script" path="res://scripts/player.gd" id="1_s15lx"]
 [ext_resource type="Texture2D" uid="uid://boucuv8jhdl4x" path="res://assets/Character/Cyborg_attack3.png" id="2_grifo"]
@@ -13,6 +13,7 @@
 [ext_resource type="Texture2D" uid="uid://ciy5i5mykddp5" path="res://assets/Items/Hearts/Empty container/32px.png" id="11_w60gd"]
 [ext_resource type="Texture2D" uid="uid://dmkfrmndh5456" path="res://assets/Items/Hearts/Red Heart/Idle/Red/Red 32px1.png" id="12_itddw"]
 [ext_resource type="Texture2D" uid="uid://bngynl1qsq5yt" path="res://assets/Items/Hearts/Red Heart/Idle/Red/Red 32px2.png" id="13_6fp1u"]
+[ext_resource type="Script" path="res://scenes/label.gd" id="14_beh6d"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ctw5b"]
 size = Vector2(35, 35)
@@ -483,12 +484,13 @@ texture_progress = SubResource("AnimatedTexture_6va7w")
 
 [node name="Score" type="CanvasLayer" parent="."]
 
-[node name="Label" type="Label" parent="Score"]
+[node name="kills_label" type="Label" parent="Score"]
 offset_left = 1716.0
 offset_top = 1.0
 offset_right = 1764.0
 offset_bottom = 24.0
 scale = Vector2(2, 2)
 text = "Score:0"
+script = ExtResource("14_beh6d")
 
 [connection signal="timeout" from="JumpTimer" to="." method="_on_jump_timer_timeout"]

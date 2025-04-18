@@ -1,14 +1,10 @@
-res://levels/industrialZone1.tscn
-res://scripts/player.gd
-res://scenes/main.tscn
-res://levels/greenZone2.tscn
-res://assets/Green Zone/player.tscn
-res://scenes/Enemy_Shooter.tscn
-res://levels/mobIndustrial.tscn
-res://levels/industrialZone.tscn
-res://levels/greenZone1.tscn
-res://levels/ExclusionZone.tscn
 res://scenes/player.tscn
+res://scenes/label.gd
 res://levels/industrialZone2.tscn
+res://levels/ExclusionZone.tscn
+res://scenes/slime.tscn
+res://scripts/slime.gd
 res://scripts/enemy_shooter.gd
-res://scripts/double_jump.gd
+res://levels/industrialZone1.tscn
+res://levels/greenZone2.tscn
+res://levels/greenZone1.tscn

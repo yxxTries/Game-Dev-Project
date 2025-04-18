@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://c60lterrw6q11"]
+
+[ext_resource type="PackedScene" uid="uid://cq7nghguv3x8v" path="res://levels/greenZone1.tscn" id="1_krfub"]
+
+[node name="main" type="Node2D"]
+
+[node name="GreenZone1" parent="." instance=ExtResource("1_krfub")]

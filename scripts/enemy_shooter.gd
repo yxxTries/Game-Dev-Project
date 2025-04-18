@@ -96,6 +96,7 @@ func die():
 	await get_tree().create_timer(1).timeout
 	self.queue_free()
 	set_physics_process(true)
+	Global.enemies_killed += 1
 
 func update_healthbar():
 	healthbar.visible = true

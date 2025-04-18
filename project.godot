@@ -11,19 +11,21 @@ config_version=5
 [application]
 
 config/name="Remains"
-run/main_scene="res://scenes/main.tscn"
+run/main_scene="res://levels/main.tscn"
 config/features=PackedStringArray("4.3", "Forward Plus")
 config/icon="res://icon.svg"
 
 [autoload]
 
 Dialogic="*res://addons/dialogic/Core/DialogicGameHandler.gd"
+Global="*res://Global.gd"
 
 [dialogic]
 
 directories/dch_directory={}
 directories/dtl_directory={
 "Dialogues/timeline": "res://assets/Dialogues/timeline.dtl",
+"industrialZone2": "res://dialogues/industrialZone2.dtl",
 "level2": "res://dialogues/level2.dtl",
 "level3": "res://dialogues/level3.dtl",
 "timeline": "res://dialogues/timeline.dtl"
@@ -66,6 +68,7 @@ enabled=PackedStringArray("res://addons/dialogic/plugin.cfg")
 
 enemy=""
 player=""
+bullet=""
 
 [input]
 

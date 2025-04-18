@@ -5,14 +5,18 @@ class_name slimeEnemy
 const speed = 30
 var is_frog_chase: bool
 
-var health = 80
-var health_max = 80
-var health_min = 0
+@onready var healthbar = $HealthBar/ProgressBar
+@onready var healthbar_timer = Timer.new()
+
+@export var max_health := 3
+var health := max_health
 
 var dead: bool = false
 var taking_damage: bool = false
 var damage_to_deal = 20
 var is_dealing_damage: bool = false
+var hurt:bool = false
+var delayOver:bool = true
 
 var dir: Vector2
 const gravity = 900
@@ -22,7 +26,12 @@ var is_roaming: bool = true
 var player:CharacterBody2D 
 var playe_in_area = false
 
+
+
 func _process(delta):
+	if health <= 0:
+		die()
+		
 	if !is_on_floor():
 		velocity.y += gravity*delta
 		velocity.x = 0
@@ -75,5 +84,34 @@ func choose(array):
 	return array.front()
 
 
-#func _on_slime_hit_box_area_entered(area: Area2D) -> void:
-	#var damage = global damage
+func _on_slime_hit_box_body_shape_entered(body_rid: RID, body: Node2D, body_shape_index: int, local_shape_index: int) -> void:
+	if body.is_in_group("player"): 
+		player.hit()
+
+func hit():
+	print("body hit")
+	hurt = true
+	health-=1
+	update_healthbar()
+	$AnimatedSprite2D.stop()
+	$AnimatedSprite2D.play("hurt")
+	await $AnimatedSprite2D.animation_finished
+	
+	hurt = false
+
+func update_healthbar():
+	print("helthbar updated")
+	healthbar.visible = true
+	healthbar.value = health
+	await get_tree().create_timer(1).timeout
+	healthbar.visible = false
+	
+func die():
+	set_physics_process(false)
+	$AnimatedSprite2D.stop()
+	$AnimatedSprite2D.play("death")
+	await get_tree().create_timer(1).timeout
+	self.queue_free()
+	set_physics_process(true)
+	Global.enemies_killed += 1
+	
