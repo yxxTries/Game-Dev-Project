@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://nrg85hkci438"]
+
+[ext_resource type="Script" path="res://scripts/double_jump.gd" id="1_7b43u"]
+[ext_resource type="Texture2D" uid="uid://cyeil83mqerea" path="res://assets/Items/Skills/Skillicon6_21.png" id="1_lyryq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lur4g"]
+size = Vector2(21, 21)
+
+[node name="DoubleJump" type="Area2D"]
+script = ExtResource("1_7b43u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 0.5)
+shape = SubResource("RectangleShape2D_lur4g")
+
+[node name="icon" type="Sprite2D" parent="."]
+position = Vector2(1, 0)
+texture = ExtResource("1_lyryq")
+
+[connection signal="body_shape_entered" from="." to="." method="_on_body_shape_entered"]

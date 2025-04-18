@@ -1,0 +1,52 @@
+[gd_scene load_steps=7 format=3 uid="uid://c315knwnr6ekp"]
+
+[ext_resource type="Script" path="res://scripts/path_2d.gd" id="1_0keas"]
+[ext_resource type="Texture2D" uid="uid://dhvhk45q525c" path="res://assets/industrialZone/tileset/Mop.png" id="2_qa3di"]
+
+[sub_resource type="Curve2D" id="Curve2D_o3swm"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -2, 6, 0, 0, 0, 0, 317, 1)
+}
+point_count = 2
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hxxg4"]
+size = Vector2(375.064, 65.1174)
+
+[sub_resource type="Animation" id="Animation_4i2dh"]
+resource_name = "move"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_q62fe"]
+_data = {
+"move": SubResource("Animation_4i2dh")
+}
+
+[node name="Path2D" type="Path2D"]
+curve = SubResource("Curve2D_o3swm")
+script = ExtResource("1_0keas")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="."]
+position = Vector2(-2, 6)
+rotation = -0.0156727
+
+[node name="RemoteTransform2D" type="RemoteTransform2D" parent="PathFollow2D"]
+remote_path = NodePath("../../AnimatableBody2D")
+
+[node name="AnimatableBody2D" type="AnimatableBody2D" parent="."]
+position = Vector2(-2, 6)
+rotation = -0.0156727
+
+[node name="Sprite2D" type="Sprite2D" parent="AnimatableBody2D"]
+position = Vector2(156.77, 6.75856)
+rotation = 1.31772
+scale = Vector2(6.16546, 11.0797)
+skew = 0.118682
+texture = ExtResource("2_qa3di")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="AnimatableBody2D"]
+position = Vector2(133.303, 25.6599)
+shape = SubResource("RectangleShape2D_hxxg4")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_q62fe")
+}
