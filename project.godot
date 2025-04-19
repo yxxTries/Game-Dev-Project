@@ -24,11 +24,16 @@ Global="*res://Global.gd"
 
 directories/dch_directory={}
 directories/dtl_directory={
-"Dialogues/timeline": "res://assets/Dialogues/timeline.dtl",
-"industrialZone2": "res://dialogues/industrialZone2.dtl",
+"boss_intro": "res://dialogues/boss_intro.dtl",
+"dialogues/timeline": "res://dialogues/timeline.dtl",
+"ending": "res://dialogues/ending.dtl",
 "level2": "res://dialogues/level2.dtl",
 "level3": "res://dialogues/level3.dtl",
-"timeline": "res://dialogues/timeline.dtl"
+"level4": "res://dialogues/level4.dtl",
+"level5": "res://dialogues/level5.dtl",
+"level6": "res://dialogues/level6.dtl",
+"level7": "res://dialogues/level7.dtl",
+"timeline": "res://assets/Dialogues/timeline.dtl"
 }
 glossary/default_case_sensitive=true
 layout/style_list=[]

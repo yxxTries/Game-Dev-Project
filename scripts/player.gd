@@ -2,7 +2,7 @@ extends CharacterBody2D
 var bullet_path = preload("res://scenes/hero_bullet.tscn")
 var healthBar = []
 var bullet:Node2D
-const SPEED = 100.0
+@export var SPEED = 100.0
 const JUMP_VELOCITY = -400.0
 var has_gun = false
 var facing_left = false
@@ -13,10 +13,11 @@ var canDoubleJump =  false
 var health = 6
 var score:int = 0
 var is_dead:bool = false
+var can_move := true
 func _ready() -> void:
 	healthBar = [$"HealthBar/health1",$"HealthBar/health2",$"HealthBar/health3",$"HealthBar/health4",$"HealthBar/health5",$"HealthBar/health6"]
 func _physics_process(delta: float) -> void:
-	if !hurt:
+	if !hurt and can_move:
 		move(delta)
 
 func move(delta):
@@ -121,3 +122,6 @@ func update_healthbar():
 
 func _on_jump_timer_timeout() -> void:
 	canDoubleJump = false
+
+func set_movement_enabled(value: bool) -> void:
+	can_move = value

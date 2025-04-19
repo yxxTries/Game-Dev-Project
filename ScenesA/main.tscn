@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://can38flci5lxs"]
+
+[ext_resource type="PackedScene" uid="uid://cq7nghguv3x8v" path="res://levels/greenZone1.tscn" id="1_2ej6x"]
+[ext_resource type="PackedScene" uid="uid://b8vofvhgwbis2" path="res://ScenesA/Player.tscn" id="2_o1vk2"]
+
+
+[node name="main" type="Node2D"]
+
+[node name="start" parent="." instance=ExtResource("1_2ej6x")]
+process_mode = 3
+
+[node name="player" parent="." instance=ExtResource("2_o1vk2")]
+position = Vector2(30, 1017)
+
+[node name="Camera2D" type="Camera2D" parent="player"]
+position = Vector2(41, -108)
+zoom = Vector2(3, 3)
+limit_left = 0
+limit_right = 1920
+limit_smoothed = true

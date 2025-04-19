@@ -1,10 +1,3 @@
-res://scenes/player.tscn
-res://scenes/label.gd
-res://levels/industrialZone2.tscn
-res://levels/ExclusionZone.tscn
-res://scenes/slime.tscn
-res://scripts/slime.gd
-res://scripts/enemy_shooter.gd
-res://levels/industrialZone1.tscn
-res://levels/greenZone2.tscn
-res://levels/greenZone1.tscn
+res://levels/boss_lvl.tscn
+res://scripts/exclusion_zone_2.gd
+res://levels/exclusionZone2.tscn

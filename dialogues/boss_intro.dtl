@@ -1,0 +1,20 @@
+join  center
+Long Time no see Cy Didnt hear from you in a while.
+join  center 
+(This place seems familiar but who is this guy.)
+update 
+I thought i was lucky enough to get rid of you Well.
+update 
+Who are you!
+update 
+Cy what you can't remember me.
+update 
+I cant remember anything
+Help me.
+update 
+Thats great I wanted to test my mech out 
+perfect oppurtunity isnt it.
+Alright get ready.
+[signal arg="dialogue_complete"]
+[wait_input]
+[end_timeline]

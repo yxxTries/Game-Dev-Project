@@ -1,0 +1,63 @@
+[gd_scene load_steps=9 format=3 uid="uid://h75bffofrebg"]
+
+[ext_resource type="Texture2D" uid="uid://cgmf3jwgfc4ny" path="res://assets/Enemies/robot_1-removebg-preview.png" id="1_0gj71"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5sh41"]
+atlas = ExtResource("1_0gj71")
+region = Rect2(96, 13, 32, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lg7w2"]
+atlas = ExtResource("1_0gj71")
+region = Rect2(160, 13, 32, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_idfc2"]
+atlas = ExtResource("1_0gj71")
+region = Rect2(224, 13, 32, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4lo27"]
+atlas = ExtResource("1_0gj71")
+region = Rect2(292, 13, 32, 60)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s3pod"]
+atlas = ExtResource("1_0gj71")
+region = Rect2(356, 13, 32, 60)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ocfby"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5sh41")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lg7w2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_idfc2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4lo27")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s3pod")
+}],
+"loop": true,
+"name": &"Shutdown",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_whnky"]
+radius = 9.0
+height = 38.0
+
+[node name="Skates" type="RigidBody2D"]
+position = Vector2(210, 85)
+
+[node name="SkateBoard" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_ocfby")
+animation = &"Shutdown"
+autoplay = "Shutdown"
+frame_progress = 0.608617
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1)
+shape = SubResource("CapsuleShape2D_whnky")

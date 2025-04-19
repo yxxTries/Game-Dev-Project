@@ -21,7 +21,7 @@ func _on_next_stage_body_shape_exited(body_rid: RID, body: Node2D, body_shape_in
 		return
 	$"../AnimationPlayer".play("fade_out")
 	await $"../AnimationPlayer".animation_finished
-	get_tree().change_scene_to_file("res://scenes/main.tscn")
+	get_tree().change_scene_to_file("res://levels/exclusionZone2.tscn")
 
 
 func _on_restart_pressed() -> void:

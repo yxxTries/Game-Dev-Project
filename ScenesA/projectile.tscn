@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=3 uid="uid://conqa44j23ph"]
+
+[ext_resource type="Texture2D" uid="uid://c6trild6uyasg" path="res://assets/Enemies/miss-removebg-preview.png" id="1_awjll"]
+[ext_resource type="Script" path="res://Scripts_Andrew/projectile.gd" id="1_rggus"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_hrlm6"]
+radius = 4.0
+height = 26.0
+
+[node name="Projectile" type="Area2D"]
+script = ExtResource("1_rggus")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.5708
+shape = SubResource("CapsuleShape2D_hrlm6")
+
+[node name="Timer" type="Timer" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-1.43051e-06, -9.53674e-07)
+scale = Vector2(0.0907818, 0.0827768)
+texture = ExtResource("1_awjll")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
